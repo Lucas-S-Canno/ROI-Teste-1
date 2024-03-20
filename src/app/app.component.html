@@ -1,0 +1,83 @@
+<div class="container">
+
+  <section>
+
+    <span class="step">Passo 1 de 2</span>
+
+  <div class="title-container">
+    <h1 class="title-container__title">Cadastro</h1>
+    <p class="title-container__subtitle">Complete os dados solicitados do cliente</p>
+  </div>
+
+  <h2 class="form-title">
+    Dados pessoais
+  </h2>
+
+  <form [formGroup]="form">
+
+    <div class="name-surname">
+      <div class="form-group name-surname__name">
+        <label for="name">Nome</label>
+        <input type="text" id="name" class="form-control"
+        [ngClass]="form.get('name')?.errors? 'invalid' : ''"
+        [ngClass]="form.get('name')?.disabled? 'disabled' : ''"
+        formControlName="name" placeholder="Harry">
+        <div class="text-danger" *ngIf="form.get('name')?.errors && this.form.get('name')?.touched">
+          {{ getErrorMessage('name') }}
+        </div>
+      </div>
+
+      <div class="form-group name-surname__surname">
+        <label for="surname">Sobrenome</label>
+        <input type="text" id="surname" class="form-control"
+        [ngClass]="form.get('surname')?.errors? 'invalid' : ''"
+        [ngClass]="form.get('surname')?.disabled? 'disabled' : ''"
+        formControlName="surname" placeholder="Potter">
+        <div class="text-danger" *ngIf="form.get('surname')?.errors && this.form.get('surname')?.touched">
+          {{ getErrorMessage('surname') }}
+        </div>
+      </div>
+    </div>
+
+
+    <div class="cpf-tel">
+      <div class="form-group cpf-tel__cpf">
+        <label for="cpf">CPF</label>
+        <input type="number" id="cpf" class="form-control"
+        [ngClass]="form.get('cpf')?.errors? 'invalid' : ''"
+        [ngClass]="form.get('cpf')?.disabled? 'disabled' : ''"
+        formControlName="cpf" placeholder="000.000.000-00">
+        <div class="text-danger" *ngIf="form.get('cpf')?.errors && this.form.get('cpf')?.touched">
+          {{ getErrorMessage('cpf') }}
+        </div>
+      </div>
+
+      <div class="form-group cpf-tel__tel">
+        <label for="phone">Telefone</label>
+        <input type="number" id="phone" class="form-control"
+        [ngClass]="form.get('phone')?.errors? 'invalid' : ''"
+        [ngClass]="form.get('phone')?.disabled? 'disabled' : ''"
+        formControlName="phone" placeholder="(00) 00000-0000">
+        <div class="text-danger" *ngIf="form.get('phone')?.errors && this.form.get('phone')?.touched">
+          {{ getErrorMessage('phone') }}
+        </div>
+      </div>
+    </div>
+
+  </form>
+
+  <div class="buttons">
+      <div class="buttons__line-button">
+        <span>Voltar</span>
+      </div>
+
+      <div class="buttons__standard-button">
+        <span class="buttons__standard-button__text">Próximo passo</span>
+        <span class="buttons__standard-button__icon">></span>
+      </div>
+  </div>
+
+  </section>
+
+</div>
+

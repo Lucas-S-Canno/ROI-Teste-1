@@ -1,0 +1,270 @@
+* {
+  font-family: 'Ford F-1';
+}
+
+.container {
+  width: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2em;
+}
+
+section {
+  width: 80em;
+}
+
+.step {
+  font-size: .5em;
+  color: #666;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  &__title {
+    margin: .1em 0 0 0;
+    font-weight: 300;
+    font-size: 2em;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-size: .8em;
+    font-weight: 400;
+    color: #666;
+  }
+}
+
+.form-title {
+  margin: 1.5em 0 0 0;
+  font-weight: 300;
+  font-size: 1.2em;
+}
+
+.name-surname {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 1.5em 0 0 0;
+  width: 100%;
+
+  &__name {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-right: 2em;
+    width: 48%;
+
+    & label {
+      font-weight: 400;
+      font-size: .6em;
+      margin-bottom: .3em;
+    }
+
+    & input {
+      font-size: .6em;
+      padding-left: .7em;
+      width: 100%;
+      height: 2.4em;
+      border-radius: .4em;
+      border: 1px solid black;
+    }
+
+    & input:focus {
+      outline: none;
+      border: 1.5px solid #046CEA;
+    }
+
+    & input.invalid {
+      outline: none;
+      border: 1px solid red;
+    }
+  }
+
+  &__surname {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 48%;
+
+    & label {
+      font-weight: 400;
+      font-size: .6em;
+      margin-bottom: .3em;
+    }
+
+    & input {
+      font-size: .6em;
+      padding-left: .7em;
+      width: 100%;
+      height: 2.4em;
+      border-radius: .4em;
+      border: 1px solid #000;
+    }
+
+    & input:focus {
+      outline: none;
+      border: 1.5px solid #046CEA;
+    }
+
+    & input.invalid {
+      outline: none;
+      border: 1px solid #BF152C;
+    }
+
+    & input.disabled {
+      outline: none;
+      background-color: #e5e5e5;
+      border: 1px solid #989898;
+    }
+  }
+}
+
+.cpf-tel {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 2em 0 0 0;
+
+  &__cpf {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-right: 2em;
+    width: 48%;
+
+    & label {
+      font-weight: 400;
+      font-size: .6em;
+      margin-bottom: .3em;
+    }
+
+    & input {
+      font-size: .6em;
+      padding-left: .7em;
+      width: 100%;
+      height: 2.4em;
+      border-radius: .4em;
+      border: 1px solid #000;
+    }
+
+    & input:focus {
+      outline: none;
+      border: 1.5px solid #046CEA;
+    }
+
+    & input.invalid {
+      outline: none;
+      border: 1px solid #BF152C;
+    }
+  }
+
+  &__tel {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 48%;
+
+    & label {
+      font-weight: 400;
+      font-size: .6em;
+      margin-bottom: .3em;
+    }
+
+    & input {
+      font-size: .6em;
+      padding-left: .7em;
+      width: 100%;
+      height: 2.4em;
+      border-radius: .4em;
+      border: 1px solid black;
+    }
+
+    & input:focus {
+      outline: none;
+      border: 1.5px solid #046CEA;
+    }
+
+    & input.invalid {
+      outline: none;
+      border: 1px solid red;
+    }
+  }
+}
+
+.text-danger {
+  color: #BF152C;
+  font-size: .5em;
+  margin: .3em 0 0 1em;
+}
+
+.buttons {
+  width: 100%;
+  margin: 3em 0 0 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &__line-button {
+    padding: .7em 1em;
+    color: #046CEA;
+    font-size: .7em;
+    text-decoration: underline;
+    margin-right: 1em;
+
+    & span {
+      cursor: pointer
+    };
+  }
+
+  &__standard-button {
+    cursor: pointer;
+    padding: .7em 1em;
+    border-radius: .3em;
+    font-size: .7em;
+    color: #fff;
+    background-color: #046CEA;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__text {
+      margin-right: 1em;
+    }
+  }
+}
+
+@media (max-width: 799px) {
+  .name-surname {
+    flex-direction: column;
+  }
+  .cpf-tel {
+    flex-direction: column;
+  }
+  .name-surname__name {
+    width: 100%;
+  }
+  .name-surname__surname {
+    width: 100%;
+  }
+  .cpf-tel__cpf {
+    width: 100%;
+  }
+  .cpf-tel__tel {
+    width: 100%;
+  }
+}
